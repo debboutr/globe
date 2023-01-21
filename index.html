@@ -3,16 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="stylesheet" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mr. Wiggles the Worm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,700&family=Lato&display=swap" rel="stylesheet">
     <style>
         body {
-            margin: 0;
+            margin: 4;
+            -webkit-font-smoothing: antialiased;
+        }
+        .font-lato {
+          font-family: 'Lato',
+          sans-serif;
+        }
+        .font-exo {
+          font-family: 'Exo 2',
+          sans-serif;
         }
     </style>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="flex h-screen bg-black">
+      <div class="w-1/2 flex flex-col justify-center px-8">
+        <div style="max-width:500px;" class="mx-auto">
+          <h1 class="text-white text-4xl mb-8 font-exo leading-none">CHALLENGING THE STANDARD OF SPACE EXPLORATION</h1>
+          <p class="text-gray-400 mb-8 font-lato">Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia.</p>
+          <div>
+            <a href="#" class="text-white bg-green-600 inline-block px-8
+              font-lato
+              py-4 rounded-full">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div id="canvasContainer" class="w-1/2">
+        <canvas></canvas>
+      </div>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
