@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    build: .
+    restart: always
+    image: globe:latest
+    container_name: globe
+    hostname: bologna
+    ports:
+      - "8089:80"
+

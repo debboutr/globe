@@ -32,7 +32,7 @@ const sphere = new THREE.Mesh( new THREE.SphereGeometry(5, 50, 50),
         fragmentShader,
         uniforms: {
             globeTexture: {
-                value: new THREE.TextureLoader().load('./img/globe_bigger.jpg')
+                value: new THREE.TextureLoader().load('./globe.jpg')
             }
         }
     }))
@@ -70,7 +70,7 @@ for (let i = 0; i < 10000; i++) {
     starVertices.push(x, y, z)
 }
 
-starGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3))
+starGeometry.setAttribute('position', new Float32BufferAttribute(starVertices, 3))
 
 const stars = new THREE.Points( starGeometry, starMaterial )
 console.log(stars)
