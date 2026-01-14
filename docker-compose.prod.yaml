@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web:
+    build: .
+    image: globe:latest
+    container_name: globe
+    networks:
+      - frontend
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.globe.rule=Host('globe.debbout.info')
+      - traefik.http.routers.globe.entrypoint=web
+    restart: unless-stopped
+networks:
+  frontend:
+    external: true
